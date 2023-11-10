@@ -19,4 +19,4 @@ volumes:
   driver_opts:
     o: bind
     type: none
-    device: /Users/cibeles/www/pruebas/dockers/react/node_data
+    device: "${PATH_VOLUME}"
