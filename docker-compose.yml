@@ -1,0 +1,22 @@
+version: "3.1"
+services:
+  node:
+   image: img_node14:1.0
+   restart: always
+   ports:
+    - "3000:3000"
+   expose:
+    - "3000"
+   volumes:
+    - n_data:/app/react-app
+    #- /app/react-app/node_modules/
+   command: sh -c " cd /app/react-app && npm start"
+
+
+volumes:
+ n_data:
+  driver: local
+  driver_opts:
+    o: bind
+    type: none
+    device: /Users/cibeles/www/pruebas/dockers/react/node_data
