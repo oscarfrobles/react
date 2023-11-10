@@ -4,13 +4,13 @@ services:
    image: img_node14:1.0
    restart: always
    ports:
-    - "3000:3000"
+    - "${REACT_PORT}:3000"
    expose:
-    - "3000"
+    - "${REACT_PORT}"
    volumes:
     - n_data:/app/react-app
     #- /app/react-app/node_modules/
-   command: sh -c " cd /app/react-app && npm start"
+   command: sh -c " cd /app/react-app && npm start && echo \"your port is ${REACT_PORT}\""
 
 
 volumes:

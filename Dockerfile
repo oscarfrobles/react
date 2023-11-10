@@ -22,4 +22,4 @@ RUN npx create-react-app react-app
  
 WORKDIR /app/react-app/
 
-CMD ["npm","start", "--port 3000", "--host 0.0.0.0"]
+CMD ["npm","start", "--host 0.0.0.0"]
