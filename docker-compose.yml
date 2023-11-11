@@ -10,7 +10,11 @@ services:
    volumes:
     - n_data:/app/react-app
     #- /app/react-app/node_modules/
-   command: sh -c " cd /app/react-app && npm start && echo \"your port is ${REACT_PORT}\""
+   command: sh -c " cd /app/react-app \
+                  && npm install react-router-dom \
+                  && npm install --save styled-components \
+                  &&   npm start \
+                  && echo \"your port is ${REACT_PORT}\""
 
 
 volumes:
