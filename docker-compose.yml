@@ -13,6 +13,7 @@ services:
    command: sh -c " cd /app/react-app \
                   && npm install react-router-dom \
                   && npm install --save styled-components \
+                  && npm install react-icons
                   &&   npm start \
                   && echo \"your port is ${REACT_PORT}\""
 
